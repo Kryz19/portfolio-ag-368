@@ -1,0 +1,351 @@
+:root {
+    --blue: #1C085E;
+    --rose: #C94077;
+    --thistle: #E8C7DE;
+    --white: #E8EDEC;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .chathura-regular {
+    font-family: "Chathura", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .alata-regular {
+    font-family: "Alata", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  body {
+    background-color: var(--rose);
+    font-family: Alata;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--white);
+    position: relative;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    padding: 0;
+    margin: 0;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  img {
+    display: block;
+    width: 100%;
+  }
+  
+  /* Navbar */
+  .nav {
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10vh;
+    background-color: var(--blue);
+    z-index: 10;
+  }
+  
+  .nav-list {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    margin-right: 2rem;
+  }
+  
+  .nav-list a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    padding: 0 2rem;
+    height: 100%;
+    text-decoration: none;
+    transition: background 0.3s ease, border-radius 0.3s ease;
+  }
+  .nav-list a:link {
+    color: var(--white);
+  }
+  
+  .nav-list a:visited {
+    color: var(--thistle);
+  }
+  .nav-list a:hover {
+    background: var(--rose);
+    border: none solid var(--rose);
+    border-radius: 30px;
+  }
+  
+  .nav-list a:active {
+    color: var(--blue);
+  }
+  
+  /* Welcome Section */
+  
+  .welcome-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(var(--thistle), var(--rose) 75%);
+    position: relative;
+    z-index: 0;
+  }
+  
+  .welcome-container {
+    width: calc(100% - 31%);
+    height: calc(100% - 31%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+  }
+  
+  .welcome-section h1 {
+    font-size: 10rem;
+    color: var(--white);
+    text-align: center;
+  }
+  
+  .welcome-section p {
+    font-family: "Chathura";
+    font-size: 5rem;
+    color: var(--white);
+    margin: 0;
+    display: flex;
+    justify-content: left;
+  }
+  
+  .welcome-section p:last-child {
+    color: var(--blue);
+    font-size: 5rem;
+    display: flex;
+    justify-content: right;
+  }
+  
+  /* Projects Section */
+  #projects {
+    text-align: center;
+    color: var(--white);
+  }
+  
+  #projects h1 {
+    font-size: 4rem;
+    margin: auto;
+    padding: 6.25rem;
+  }
+  
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 4rem;
+    max-width: 1300px;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+  }
+  
+  .project-tile {
+    background-color: var(--blue);
+    border-radius: 30px;
+    text-align: center;
+    color: var(--white);
+    aspect-ratio: 1/1;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .project-tile a:hover {
+    transform: scale(1.05);
+  }
+  
+  .project-tile img {
+    width: 96%;
+    height: 85%;
+    object-fit: cover;
+    border-radius: 30px;
+    margin: auto;
+    padding: 2%;
+    padding-bottom: 0;
+  }
+  
+  .project-tile p {
+    margin: auto;
+    text-align: center;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Contact Section */
+  .contact-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: var(--thistle);
+    padding: 150px 100px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 1400px;
+    margin: 100px 50px;
+  }
+  
+  #profile-pic {
+    margin-right: 100px;
+  }
+  
+  #profile-pic img {
+    width: 318px;
+    height: 318px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 10px solid var(--white);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  #profile-pic img:hover {
+    transform: scale(1.05);
+  }
+  
+  .contact-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  
+  .contact-section h2 {
+    font-size: 6rem;
+    color: var(--white);
+    margin-bottom: 30px;
+    font-family: 'Alata', sans-serif;
+    text-align: start;
+  }
+  
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 20px;
+    width: 100%;
+  }
+  
+  .contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+    font-size: 1rem;
+    font-family: 'Chathura', sans-serif;
+    color: var(--blue);
+    flex-wrap: nowrap;
+  }
+  
+  .contact-item img {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    mix-blend-mode: darken;
+  }
+  
+  .contact-item p {
+    margin: 0;
+    font-size: 4rem;
+  }
+  
+  /* Reflection */
+  .reflection {
+    background-color: var(--blue);
+    color: var(--thistle);
+    margin: 100px;
+    padding: 100px 50px;
+    border-radius: 30px;
+  }
+  
+  .reflection h1 {
+    font-family: 'Alata', sans-serif;
+    font-size: 4rem;
+  }
+  
+  .reflection p {
+    font-family: 'Chathura', sans-serif;
+    font-size: 4rem;
+    line-height: 1;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: var(--blue);
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0.5rem;
+    color: var(--white);
+    font-family: 'Chathura', sans-serif;
+    font-size: 4rem;
+  }
+  
+  footer div {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  footer p {
+    margin: 0;
+    font-size: 4rem;
+    line-height: 1;
+    margin-right: 2rem;
+  }
+  
+  footer img {
+    width: 4.6875rem;
+    height: auto;
+    margin-right: 1rem;
+  }
+  
+  /* Background Pattern - behind other section */
+  body::before {
+    content: '';
+    position: absolute;
+    top: 100vh;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 100vh - 10vh);
+    background-color: var(--rose);
+    background-image: url('https://i.ibb.co/VLwGGHX/Aztec-Pattern.png');
+    background-repeat: repeat;
+    background-blend-mode: soft-light;
+    z-index: -1;
+  }
+  
+  
